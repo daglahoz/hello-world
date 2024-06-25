@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="ru"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Горячая штучка</title>
+<link rel="stylesheet" href="desertnaya.css" media="screen">
+    </head>
+  <body>
+    <header class="golova">
+      <a href="Главная.html"> <img  class="logo" src="img/Logo.png"> </a>
+      <div class="navbar">
+        <div class="dropdown">
+        <button class="dropbtn">  Продукция
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="novinki.html">Новинки</a>
+          <a href="myso.html">Горячие мясные снеки</a>
+          <a href="pelmeni.html">Пельмени</a>
+          <a href="rast.html">Растительные продукты</a>
+          <a href="desertnaya.html">Десертная выпечка</a>
+        </div>
+        </div>
+        <a class="korzina" href="#">Корзина</a>
+        <a class="svyz" href="svyz.html">Обратная связь</a>
+      </div>
+        </div> 
+    </header>
+
+    <div class="conteiner">
+      <section class="">
+        <div class="product-item">
+          <img src="https://chebupie.eatwithfun.ru/img/prod1.webp">
+          <div class="product-list">
+            <h3 class="nazvanie">Чебупай #сладкопай спелая вишня</h3>
+  
+            <div class="price" class="product__price"><span class="product__price-number">199</span> ₽</div>
+              
+            <div class="product__quantity"></div>
+              <a href="#" class="button"
+              data-sb-id-or-vendor-code="38"
+              data-sb-product-name="Чебупай #сладкопай спелая вишня"
+              data-sb-product-price="199"
+              data-sb-product-quantity="1"
+              data-sb-product-img="https://chebupie.eatwithfun.ru/img/prod1.webp">В корзину</a>
+          </div>
+        </div>
+      </section>
+  
+      <section class="">
+        <div class="product-item">
+          <img src="https://chebupie.eatwithfun.ru/img/prod2.webp">
+          <div class="product-list">
+            <h3 class="nazvanie">Чебупай #сладкопай сочное яблоко</h3>
+  
+            <div class="price" class="product__price"><span class="product__price-number">169</span> ₽</div>
+              
+            <div class="product__quantity"></div>
+              <a href="#" class="button"
+              data-sb-id-or-vendor-code="39"
+              data-sb-product-name="Чебупай #сладкопай сочное яблоко"
+              data-sb-product-price="169"
+              data-sb-product-quantity="1"
+              data-sb-product-img="https://chebupie.eatwithfun.ru/img/prod2.webp">В корзину</a>
+          </div>
+        </div>
+      </section>
+  
+      <section class="">
+        <div class="product-item">
+          <img src="https://chebupie.eatwithfun.ru/img/prod3.webp">
+          <div class="product-list">
+            <h3 class="nazvanie">Чебупай #сладкопай нежная груша</h3>
+  
+            <div class="price" class="product__price"><span class="product__price-number">199</span> ₽</div>
+              
+            <div class="product__quantity"></div>
+              <a href="#" class="button"
+              data-sb-id-or-vendor-code="40"
+              data-sb-product-name="Чебупай #сладкопай нежная груша"
+              data-sb-product-price="199"
+              data-sb-product-quantity="1"
+              data-sb-product-img="https://chebupie.eatwithfun.ru/img/prod3.webp">В корзину</a>
+          </div>
+        </div>
+      </section>
+  </div>
+    
+  <footer>
+    <div class="footer">
+      <p class="podval">© Горячая штучка 2015 ЗАО «Мясная галерея» <a class="podval" href="http://www.abi.ru">www.abi.ru</a>
+
+        600009, Россия, г. Владимир, ул. Полины Осипенко, д. 65, офис 10, Тел. +7 (4922) 52-99-99</p>
+    </div>
+    <div class="footer-img">
+              <a class="podval" href="https://vk.com/eatwithfun" target="_blank"> <img  class="podval" src="img/kk.png"></a>
+  </div>
+     </footer>
+
+       <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+       <link rel="stylesheet" href="smartbasket/css/smartbasket.min.css">
+
+<div class="smart-basket__wrapper"></div>
+
+<script src="./smartbasket/js/smartbasket.min.js"></script>
+
+	<script>
+		$(function () {
+			$('.smart-basket__wrapper').smbasket({
+				productElement: 'product-item',
+				buttonAddToBasket: 'button',
+				productPrice: 'product__price-number',
+				productSize: 'product__size-element',
+				
+				productQuantityWrapper: 'product__quantity',
+				smartBasketMinArea: 'korzina',
+				countryCode: '+7',
+				smartBasketCurrency: '₽',
+        smartBasketMinIconPath: './smartbasket/img/shopping-basket-wight.svg',
+
+				agreement: {
+					isRequired: true,
+					isChecked: true,
+					isLink: 'https://artstranger.ru/privacy.html',
+				},
+				nameIsRequired: false,
+			});
+		});
+
+
+ 
+	</script>
+
+</body></html>

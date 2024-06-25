@@ -1,0 +1,262 @@
+body {
+  margin:0; 
+  padding:0;
+  background-color:  rgb(197, 34, 34);
+  padding-top: 120px;
+  padding-bottom: 55px;
+  }
+.golova {
+	width: 100%;
+	height: min-content ;
+    background-color: rgba(235, 235, 235, 0.993);
+	position: fixed;
+	top: 0;
+	z-index: 10; 
+  height: 120px;
+}
+.logo {
+  margin-top: 5px;
+  margin-left: 20px;
+  margin-bottom: 5px;
+}
+
+
+.navbar {
+ margin-top: -6em;
+ margin-left: 70em;
+}
+  
+.navbar a {
+    font-family: Lobster, cursive;
+    float: left;
+    font-size: 25px;
+    color:  rgb(197, 34, 34);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    font-family: Lobster, cursive;
+    font-size: 25px;  
+    border: none;
+    outline: none;
+    color:  rgb(197, 34, 34);
+    padding: 14px 16px;
+    background-color: inherit;
+    margin: 0;
+  }
+  
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: rgba(235, 235, 235, 0.952);
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(235, 235, 235, 0.952);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+.korzina {
+    margin-left: 1.0em;
+    
+}
+.svyz {
+    margin-left: 1.0em;
+}
+
+.footer{
+	position: fixed; 
+	bottom: 0; 
+	width: 100%;
+	background-color: rgba(235, 235, 235, 0.993);
+  height: 55px;
+}
+
+.footer, .footer-img {
+	bottom: 0; 
+	margin: 0px auto;
+  position: fixed;
+}
+
+.podval {
+	font-family: Lobster, cursive;
+    font-size: 15px;
+	z-index: 5;
+}
+
+.footer-img {
+	right: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+.product-item {
+  height: 463.5px;
+  width: 300px;
+  text-align: center;
+  margin: 0 auto;
+  border-bottom: 2px solid #F5F5F5;
+  background: white;
+  transition: .3s ease-in;
+}
+.product-item:hover {
+  border-bottom: 2px solid rgb(197, 34, 34);
+}
+.product-item img {
+  display: block;
+  width: 100%;
+}
+.product-list {
+  background: white;
+  padding: 15px 0;
+}
+.product-list h3 {
+  font-size: 18px;
+  font-weight: 400;
+  color: #000000;
+  margin: 0 0 10px 0;
+}
+.price {
+  font-size: 22px;
+  color: #fc5a5a;
+  display: block;
+  margin-bottom: 12px;
+  font-family: Lobster, cursive;
+  text-align: center;
+}
+.button {
+  font-family: Lobster, cursive;
+  font-size: 15px;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0 12px;
+  background: #cccccc;
+  color: white;
+  text-transform: uppercase;
+  line-height: 28px;
+  transition: .3s ease-in;
+}
+.product-item:hover .button {
+  background: #fc5a5a;
+}
+.product__quantity{
+  background-color: #ffffff;
+  margin-bottom: 10px;
+  margin-left: 30px;
+  margin-right: 30px;
+  text-align: center;
+  width: fit-content;
+}
+
+.nazvanie {
+  font-family: Lobster, cursive;
+  font-size: 25px;
+  text-align: center;
+}
+
+.naget {
+  display: block;
+}
+
+
+.smart-basket__add-item:hover {
+  background-color: #fc5a5a;
+}
+
+.smart-basket__remove-item:hover {
+  background-color: #fc5a5a;
+}
+
+.smart-basket__product-quantity-state {
+  font-family: Lobster, cursive;
+}
+
+.smart-basket__min {
+  background-color: rgba(255, 8, 8, 0);
+  position: absolute;
+  color: rgba(255, 255, 255, 0);
+  width: 140px;
+  height: 90px;
+  margin-left: -120px;
+  margin-top: -20px;
+  border-color: #cccccc00;
+}
+.conteiner{
+  display: flex;
+flex-direction: row;
+justify-content: space-around;
+align-items: stretch;
+margin-top: 50px;
+}
+
+.btn-up {
+  /* фиксированное позиционирование */
+  position: fixed;
+  /* цвет фона */
+  background-color: rgb(197, 34, 34);
+  /* расстояние от правого края окна браузера */
+  right: 50px;
+  /* расстояние от нижнего края окна браузера */
+  bottom: 0;
+  /* скругление верхнего левого угла */
+  border-top-left-radius: 8px;
+  /* скругление верхнего правого угла */
+  border-top-right-radius: 8px;
+  /* вид курсора */
+  cursor: pointer;
+  /* отображение элемента как flex */
+  display: flex;
+  /* выравниваем элементы внутри элемента по центру вдоль поперечной оси */
+  align-items: center;
+  /* выравниваем элементы внутри элемента по центру вдоль главной оси */
+  justify-content: center;
+  /* ширина элемента */
+  width: 60px;
+  /* высота элемента */
+  height: 55px;
+}
+
+.btn-up::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background: transparent no-repeat center center;
+  background-size: 100% 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23fff' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z'/%3E%3C/svg%3E");
+}
+
+.btn-up_hide {
+  display: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btn-up:hover {
+    background-color: rgb(128, 21, 21); /* цвет заднего фона при наведении */
+  }
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="ru"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Горячая штучка</title>
+<link rel="stylesheet" href="glavnay.css" media="screen">
+<script src="slider.js"></script>
+<meta content="width=device-width, initial-scale=1" name="viewport">
+    </head>
+  <body>
+    <header class="golova">
+      <a href="Главная.html"> <img  class="logo" src="img/Logo.png"> </a>
+      <div class="navbar">
+        <div class="dropdown">
+        <button class="dropbtn">  Продукция
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="novinki.html">Новинки</a>
+          <a href="myso.html">Горячие мясные снеки</a>
+          <a href="pelmeni.html">Пельмени</a>
+          <a href="rast.html">Растительные продукты</a>
+          <a href="desertnaya.html">Десертная выпечка</a>
+        </div>
+        </div>
+        <a class="korzina" href="#">Корзина</a>
+        <a class="svyz" href="svyz.html">Обратная связь</a>
+      </div>
+        </div> 
+    </header>
+    <div class="nov">
+      <h1 class="zagnov">Попробуйте новинки!</h1>
+    </div>
+<!-- Основной блок слайдера -->
+<div class="slider">
+
+  <!-- Первый слайд -->
+  <div class="item">
+    <img src="https://eatwithfun.ru/images/products/9445335f0fc28c8ed290932de5fbb5a8a7586887.png">
+  </div>
+
+  <!-- Второй слайд -->
+  <div class="item">
+    <img src="https://eatwithfun.ru/images/products/e293d36d2fefa968c71116a9bc9ec454b91661d2.png">
+  </div>
+
+  <!-- Третий слайд -->
+  <div class="item">
+    <img src="https://eatwithfun.ru/images/products/ccfb8a33da0fb6c32f1eea0af512f95bec7b57ad.png">
+  </div>
+
+    <!-- Четвертый слайд -->
+    <div class="item">
+      <img src="https://eatwithfun.ru/images/products/c931a391ee2495a157faec7b547a9909396d7214.png">
+    </div>
+
+      <!-- Пятый слайд -->
+  <div class="item">
+    <img src="https://eatwithfun.ru/images/products/ae35a1cdddb3002376b11ddfad2e95ba1744b9d1.png">
+  </div>
+
+  <!-- Шестой слайд -->
+  <div class="item">
+    <img src="https://eatwithfun.ru/images/products/0c6742a90f8293a3e246ef78606318f146433398.png">
+  </div>
+
+  <!-- Седьмой слайд -->
+  <div class="item">
+    <img src="img/naga.png">
+  </div>
+
+  <!-- Кнопки-стрелочки -->
+  <a class="previous" onclick="previousSlide()">&#10094;</a>
+  <a class="next" onclick="nextSlide()">&#10095;</a>
+</div>
+
+    <footer>
+      <div class="footer">
+        <p class="podval">© Горячая штучка 2015 ЗАО «Мясная галерея» <a class="podval" href="http://www.abi.ru">www.abi.ru</a>
+
+          600009, Россия, г. Владимир, ул. Полины Осипенко, д. 65, офис 10, Тел. +7 (4922) 52-99-99</p>
+      </div>
+      <div class="footer-img">
+                <a class="podval" href="https://vk.com/eatwithfun" target="_blank"> <img  class="podval" src="img/kk.png"></a>
+    </div>
+       </footer>
+
+       <div class="btn-up btn-up_hide"></div>
+      
+       <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+       <link rel="stylesheet" href="smartbasket/css/smartbasket.min.css">
+
+<div class="smart-basket__wrapper"></div>
+
+<script src="./smartbasket/js/smartbasket.min.js"></script>
+
+	<script>
+		$(function () {
+			$('.smart-basket__wrapper').smbasket({
+				productElement: 'product-item',
+				buttonAddToBasket: 'button',
+				productPrice: 'product__price-number',
+				productSize: 'product__size-element',
+				
+				productQuantityWrapper: 'product__quantity',
+				smartBasketMinArea: 'korzina',
+				countryCode: '+7',
+				smartBasketCurrency: '₽',
+        smartBasketMinIconPath: './smartbasket/img/shopping-basket-wight.svg',
+
+				agreement: {
+					isRequired: true,
+					isChecked: true,
+					isLink: 'https://artstranger.ru/privacy.html',
+				},
+				nameIsRequired: false,
+			});
+		});
+
+ 
+	</script>
+
+</body>
+</html>

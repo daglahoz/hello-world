@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="ru"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Главная</title>
+<link rel="stylesheet" href="glavnay.css" media="screen">
+    </head>
+  <body>
+    <h1>Оставьте заявку!</h1>
+    <form method="post" id="form">
+      <div class="row">
+        <label>🙂 Имя </label>
+        <input type="text" name="name" placeholder="" required autofocus autocomplete="off" minlength="2" maxlength="20" title="как к Вам обращаться?" />
+      </div>
+
+      <div class="row">
+        <label>📧 email</label>
+        <input type="text" name="email" placeholder="что@то.ru" required autocomplete="off" maxlength="40" title="мы напишем сюда" />
+      </div>
+
+      <div class="row">
+        <label>parol </label>
+        <input type="text" name="password" placeholder="" required autofocus autocomplete="off" minlength="2" maxlength="20" title="parol" />
+      </div>
+
+      <div class="row">
+        <input type="checkbox" name="rule" id="rule" checked required />
+        <label for="rule">Согласны на обработку персональных данных</label>
+      </div>
+
+      <div class="row">
+        <input type="submit" value="👉 отправить"/>
+      </div>
+    </form>
+      
+       <script>
+
+        const URL_APP = "https://script.google.com/macros/s/AKfycbzdr9lvjrhKaCd-DVAp-Dbh_ci67P7C6F111M8vMfdycAZzX-Z8lzGQEu6Zfo6P9Mzvmw/exec";
+
+// находим форму в документе
+            const form = document.querySelector("#form");
+
+            // указываем адрес отправки формы (нужно только в начале примера)
+            form.action = URL_APP;
+
+            // вспомогательная функция проверки заполненности формы
+            function isFilled(details) {
+              const { name, email, password, rule } = details;
+              if (!name) return false;
+              if (!email) return false;
+              if (!password) return false;
+              if (!rule) return false;
+              return true;
+            }
+
+            // навешиваем обработчик на отправку формы
+            form.addEventListener("submit", async (ev) => {
+              // отменяем действие по умолчанию
+              ev.preventDefault();
+
+              // получаем ссылки на элементы формы
+              const name = document.querySelector("[name=name]");
+              const email = document.querySelector("[name=email]");
+              const password = document.querySelector("[name=password]");
+              const rule = document.querySelector("[name=rule]");
+
+              // собираем данные из элементов формы
+              let details = {
+                name: name.value.trim(),
+                email: email.value.trim(),
+                password: password.value.trim(),
+                rule: rule.checked,
+              };
+
+              // если поля не заполнены - прекращаем обработку
+              if (!isFilled(details)) return;
+
+              // подготавливаем данные для отправки
+              let formBody = [];
+              for (let property in details) {
+                // кодируем названия и значения параметров
+                let encodedKey = encodeURIComponent(property);
+                let encodedValue = encodeURIComponent(details[property]);
+                formBody.push(encodedKey + "=" + encodedValue);
+              }
+              // склеиваем параметры в одну строку
+              formBody = formBody.join("&");
+
+              // выполняем отправку данных в Google Apps
+              const result = await fetch(URL_APP, {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+                },
+                //cors: "no-cors", <- это неправильно
+                mode: "cors", //<- оставим по умолчанию
+                body: formBody,
+              })
+                .then((res) => res.json())
+                .catch((err) => alert("Ошибка!"))
+                // .then((res) => console.log(res));
+                
+              if( result.type === 'success' ) {
+                  name.value = '';
+                  email.value = '';
+                  password.value = '';
+                alert('Спасибо за заявку!')
+              }
+              if( result.type === 'error' ) {  
+                console.log(result)          
+                alert(`Ошибка( ${result.errors}`)
+              }
+
+
+            });
+
+
+       </script>
+       
+
+</body>
+</html>
