@@ -1,0 +1,130 @@
+body {
+  margin:0; 
+  padding:0;
+  background-image: url(../сайт/img/FON_svyz.png);
+	background-repeat: no-repeat;
+  padding-top: 120px;
+  padding-bottom: 55px;
+  }
+.golova {
+	width: 100%;
+	height: min-content ;
+    background-color: rgba(235, 235, 235, 0.993);
+	position: fixed;
+	top: 0;
+	z-index: 10; 
+  height: 120px;
+}
+.logo {
+  margin-top: 5px;
+  margin-left: 20px;
+  margin-bottom: 5px;
+}
+.navbar {
+ margin-top: -6em;
+ margin-left: 70em;
+}
+  
+.navbar a {
+    font-family: Lobster, cursive;
+    float: left;
+    font-size: 25px;
+    color:  rgb(197, 34, 34);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    font-family: Lobster, cursive;
+    font-size: 25px;  
+    border: none;
+    outline: none;
+    color:  rgb(197, 34, 34);
+    padding: 14px 16px;
+    background-color: inherit;
+    margin: 0;
+  }
+  
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: rgba(235, 235, 235, 0.952);
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(235, 235, 235, 0.952);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+.korzina {
+    margin-left: 1.0em;
+}
+.svyz {
+    margin-left: 1.0em;
+}
+
+.footer{
+	position: fixed; 
+	bottom: 0; 
+	width: 100%;
+	background-color: rgba(235, 235, 235, 0.993);
+  height: 55px;
+}
+
+.footer, .footer-img {
+	bottom: 0; 
+	margin: 0px auto;
+  position: fixed;
+}
+
+.podval {
+	font-family: Lobster, cursive;
+    font-size: 15px;
+	z-index: 5;
+}
+
+.footer-img {
+	right: 0;
+}
+.okno{
+  font-family: Lobster, cursive;
+  width: 300px;
+  text-align: center;
+  margin-left: 850px;
+  margin-top: 100px;
+}
+
+.smart-basket__min {
+  background-color: rgba(255, 8, 8, 0);
+  position: absolute;
+  color: rgba(255, 255, 255, 0);
+  width: 140px;
+  height: 90px;
+  margin-left: -120px;
+  margin-top: -20px;
+  border-color: #cccccc00;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="ru"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Горячая штучка</title>
+<link rel="stylesheet" href="svyz.css" media="screen">
+    </head>
+  <body>
+    <header class="golova">
+      <a href="Главная.html"> <img  class="logo" src="img/Logo.png"> </a>
+      <div class="navbar">
+        <div class="dropdown">
+        <button class="dropbtn">  Продукция
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="novinki.html">Новинки</a>
+          <a href="myso.html">Горячие мясные снеки</a>
+          <a href="pelmeni.html">Пельмени</a>
+          <a href="rast.html">Растительные продукты</a>
+          <a href="desertnaya.html">Десертная выпечка</a>
+        </div>
+        </div>
+        <a class="korzina" href="#">Корзина</a>
+        <a class="svyz" href="svyz.html">Обратная связь</a>
+      </div>
+        </div> 
+    </header>
+
+    <section>
+      <div class="okno">
+       <a href="https://vk.com/eatwithfun"> <img src="img/Новый проект (2).png"> </a>
+        <h3>Группа Вконтакте</h3>
+       <p><a href="https://vk.com/eatwithfun"  target="_blank">Перейти</a></p>
+       <a href="https://abi.ru/"> <img src="https://abi.ru/assets/img/svg/logo-1.svg"> </a>
+       <h3>Ссылка на сайт производителя</h3>
+       <p><a href="https://abi.ru/"  target="_blank">Перейти</a></p>
+       <img src="img/телефон (1).png">
+       <h3>Телефон офиса</h3>
+       <p><a>+7 (4922) 52-99-99</a></p>
+       <h3>Ссылки на разработчиков</h3>
+       <p><a href="https://vk.com/daglahoz" target="_ksusha">Ксения</a> <a href="https://vk.com/vasya.doma" target="_vasydoma">Каролина</a> </p>
+      </div>
+    
+</section>
+
+    
+<footer>
+  <div class="footer">
+    <p class="podval">© Горячая штучка 2015 ЗАО «Мясная галерея» <a class="podval" href="http://www.abi.ru">www.abi.ru</a>
+
+      600009, Россия, г. Владимир, ул. Полины Осипенко, д. 65, офис 10, Тел. +7 (4922) 52-99-99</p>
+  </div>
+  <div class="footer-img">
+            <a class="podval" href="https://vk.com/eatwithfun" target="_blank"> <img  class="podval" src="img/kk.png"></a>
+</div>
+   </footer>
+
+       <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+       <link rel="stylesheet" href="smartbasket/css/smartbasket.min.css">
+
+<div class="smart-basket__wrapper"></div>
+
+<script src="./smartbasket/js/smartbasket.min.js"></script>
+
+	<script>
+		$(function () {
+			$('.smart-basket__wrapper').smbasket({
+				productElement: 'product-item',
+				buttonAddToBasket: 'button',
+				productPrice: 'product__price-number',
+				productSize: 'product__size-element',
+				
+				productQuantityWrapper: 'product__quantity',
+				smartBasketMinArea: 'korzina',
+				countryCode: '+7',
+				smartBasketCurrency: '₽',
+        smartBasketMinIconPath: './smartbasket/img/shopping-basket-wight.svg',
+
+				agreement: {
+					isRequired: true,
+					isChecked: true,
+					isLink: 'https://artstranger.ru/privacy.html',
+				},
+				nameIsRequired: false,
+			});
+		});
+	</script>
+
+ 
+</body></html>
